@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+namespace DataTypesApp
+{
+    class DataTypesProgram
+    {
+        public static void Main(string[] args)
+        {
+            int[] grades = new int[5];
+            Console.WriteLine("Enter the 5 grades in new seperate lines: ");
+            for (int i = 0; i < 5; i++)
+            {
+                grades[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            int sum = 0;
+            double avg = 0;
+
+            for (int i = 0; i < 5; i++)
+            {
+                sum += grades[i];
+            }
+            avg = sum / 5.0;
+
+            Console.WriteLine("The average is {0} and round off to {1}.", avg, Math.Round(avg, 0));
+            Console.WriteLine ("\nPress any key to exit....");
+
+            Console.ReadKey();
+            
+           
+            
+        }
+    }
+}
